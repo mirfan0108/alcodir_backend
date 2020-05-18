@@ -7,7 +7,8 @@ const { isAuth } = require('./middleware/auth.js')
  */
 // TODO POST HERE
 // router.POST('/management/request/vpoint', isAuth, navigator, management.createVpointRequest)
-router.POST('/management/request/vpoint',  management.createVpointRequest)
+router.post('/request/vpoint',  management.createVpointRequest)
+router.post('/review/vpoint',  management.reviewVpointRequest)
 /** 
 * END POST
 */

@@ -5,7 +5,7 @@ module.exports = (sequelize, DataTypes) => {
     mgm_user_id: DataTypes.INTEGER,
     reason: DataTypes.STRING,
     point: DataTypes.INTEGER,    
-    status: DataTypes.STRING
+    status: DataTypes.INTEGER
   }, {});
   tb_vpoint_request.associate = function(models) {
     // associations can be defined here

@@ -2,7 +2,8 @@
 module.exports = (sequelize, DataTypes) => {
   const tb_vpoint_request_list = sequelize.define('tb_vpoint_request_list', {
     vpoint_request_id: DataTypes.INTEGER,
-    mgm_user_id: DataTypes.INTEGER
+    mgm_user_id: DataTypes.INTEGER,
+    status: DataTypes.INTEGER
   }, {});
   tb_vpoint_request_list.associate = function(models) {
     // associations can be defined here

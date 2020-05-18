@@ -12,4 +12,7 @@ router.use('/privilege', privilege)
 const sales = require('./sales/Sales.Route')
 router.use('/sales', sales)
 
+const management = require('./Management.Route')
+router.use('/management', management)
+
 module.exports = router;

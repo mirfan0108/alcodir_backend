@@ -1,5 +1,5 @@
 require('dotenv').config()
-const models = require('../../database/models');
+const models = require('../../../database/models');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 
@@ -32,5 +32,6 @@ module.exports = {
         } catch (error) {
             res.status(error.code || 500).json(error)
         }
-    }
+    },
+    getList_Linked: (req, res) => {}
 }

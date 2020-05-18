@@ -9,4 +9,7 @@ router.use('/static', avatar)
 const privilege = require('./Privilege.Route')
 router.use('/privilege', privilege)
 
+const sales = require('./sales/Sales.Route')
+router.use('/sales', sales)
+
 module.exports = router;

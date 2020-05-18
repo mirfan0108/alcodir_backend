@@ -18,6 +18,10 @@ module.exports = (sequelize, DataTypes) => {
     tb_user.hasMany(models.tb_privilege, {foreignKey: 'user_id', as: 'privilege'})
     tb_user.hasMany(models.tb_division, {foreignKey: 'user_id', as: 'division'})
     tb_user.hasMany(models.tb_linkedin_connection, {foreignKey: 'user_id', as: 'linkedin'})
+    
+    tb_user.hasMany(models.tb_vpoint_request, { foreignKey: 'sldr_user_id', foreignKey: 'mgm_user_id', as: 'vpoint_request' })    
+    
+    tb_user.belongsToMany(models.tb_vpoint_request, { through: 'tb_vpoint_request_list' }) 
 
   };
   return tb_user;

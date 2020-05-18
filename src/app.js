@@ -2,6 +2,7 @@ const express       = require('express');
 const app           = express();
 var cors            = require('cors')
 const bodyParser    = require('body-parser');
+const expressValidator = require('express-validator')
 const index         = require('./routes/index');
 const helmet        = require('helmet')
 let workers         = [];
@@ -42,7 +43,7 @@ const setUpExpress = () => {
     app.use(nocache());
     app.use(helmet())
     app.use(bodyParser.json());
-    app.use(bodyParser.urlencoded({ extended: false }))
+    app.use(bodyParser.urlencoded({ extended: false }))    
     app.disable('x-powered-by');
     app.use('/api/v1', cors(corsOptions), index);
     const port = process.env.PORT || 8000;
